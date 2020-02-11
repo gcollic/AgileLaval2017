@@ -54,9 +54,9 @@
   <body>
     <div class="reveal">
       <footer id="title-footer"
-              style="background:rgba(219,120,39,1)">
+              style="background:#fffadc;color:#968356">
         <p class="atLeft">
-          <b>#AgileTourRennes2017</b>
+          <b>#AsCode</b>
         </p>
         <p class="atRight">
           <b>@gcollic - @hrambelo</b>
@@ -65,6 +65,7 @@
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
         <section>
+          <h1>&lt;/&gt;</h1>
         </section>
         <section class="center" data-background-image="img/atr17/fond3.gif">
           <h1 style="color: white;">
@@ -639,7 +640,7 @@ fi
         <section>
           <h1 id="du-code-partout">All the things ?</h1>
           <ul>
-            <li>Spec</li>
+            <li>Spec / Doc</li>
             <li>Build</li>
             <li>Test</li>
             <li>Deliver</li>
@@ -647,7 +648,38 @@ fi
           </ul>
         </section>
         <section class="center">
-            <h1>Specification As Code</h1>
+            <h1>Doc & Spec As Code</h1>
+        </section>
+        <section>
+          <h1>Décrire</h1>
+          <ul>
+            <li>4 fois ?
+              <ul>
+                <li>Spec</li>
+                <li>Test</li>
+                <li>Code</li>
+                <li>Doc</li>
+              </ul>
+            </li>
+            <li>Comment éviter de se répéter, et rester à jour ?</li>
+          </ul>
+        </section>
+        <section>
+            <h1>Living Documentation</h1>
+            <ul>
+                <li>Spécifications exécutables</li>
+                <li>Générations depuis des annotations métiers dans le code
+                  <ul>
+                    <li>Glossaire</li>
+                    <li>Schémas</li>
+                  </ul>
+                </li>
+                <li>Etc.
+                  <ul>
+                    <li><cite><a href="https://www.pearson.com/us/higher-education/program/Martraire-Living-Documentation-Continuous-Knowledge-Sharing-by-Design/PGM1724668.html">Living Documentation</a> - Cyrille Martraire</cite></li>
+                  </ul>
+                </li>
+            </ul>
         </section>
         <section>
             <img class="stretch" src="img/specs.png" />
@@ -668,31 +700,6 @@ fi
           </ul>
         </section>
         <section>
-            <h1>Living Documentation</h1>
-            <ul>
-                <li>Spécifications exécutables / Résultats de tests</li>
-                <li>Annotations métier dans le code
-                  <ul>
-                    <li>Glossaire</li>
-                    <li>Schéma</li>
-                  </ul>
-                </li>
-                <li>Et plein d'autres choses
-                  <ul>
-                    <li><cite><a href="https://leanpub.com/livingdocumentation">https://leanpub.com/livingdocumentation</a> - Cyrille Martraire</cite></li>
-                  </ul>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h1>Compléments sur GitHub</h1>
-            <ul>
-              <li><a href="https://github.com/sfauvel/livingdocumentation">sfauvel/livingdocumentation</a></li>
-              <li><a href="https://github.com/sfauvel/documentationtesting">sfauvel/documentationtesting</a></li>
-              <li><a href="https://github.com/LivingDocumentation/awesome-living-documentation">awesome-living-documentation</a></li>
-            </ul>
-        </section>
-        <section>
             <h1>Markdown</h1>
             <img alt="Markdown example"
                  class="stretch"
@@ -703,15 +710,54 @@ fi
         </section>
         <section class="center">
           <h1>Asciidoc</h1>
-          <ul>
-            <li></li>
-          </ul>
-        </section>
-        <section data-background-image="img/asciidoc-Big.png">
+          <img src="img/asciidoc-Big.png" />
         </section>
         <section>
-            <h1>Swagger</h1>
+          <h1>Diagramm / Graph</h1>
+          <img src="img/plantuml.png" />
+        </section>
+        <section>
+          <h1>Et si la doc était l'assertion du test ?</h1>
+          <ul>
+            <li><a href="https://github.com/sfauvel/documentationtesting">sfauvel/documentationtesting</a></li>
+          </ul>
+        </section>
+        <section>
+            <h1>OpenAPI / Swagger</h1>
+            <ul>
+              <li><em>Protocole</em> au format JSON</li>
+              <li>Indépendant de la techno
+                <ul>
+                  <li>Mais cantonné à l'expressivité limité des langages objets les plus répandus</li>
+                  <li>Pas de type union</li>
+                  <li>Etc.</li>
+                </ul>
+              </li>
+            </ul>
+        </section>
+        <section>
+            <h1>OpenAPI / Swagger</h1>
+            <ul>
+              <li>Générable depuis le code serveur
+                <ul><li>SwashBuckle (.Net), SwaggerAnnotations (Java), etc.</li></ul>
+              </li>
+              <li>Doc interactive automatique
+                <ul><li>Swagger UI</li></ul>
+              </li>
+              <li>Génère du code (serveur ou client)
+                <ul><li>Swagger Gen</li></ul>
+              </li>
+              <li>Test de non régression
+                <ul><li>Respect du semantic versionning</li></ul>
+              </li>
+            </ul>
+        </section>
+        <section>
+            <h1>Swagger UI</h1>
             <img src="img/swagger-ui-screenshot.png" />
+        </section>
+        <section class="center">
+          <h1>ALM As Code</h1>
         </section>
         <section>
           <h1>Build</h1>
@@ -774,7 +820,7 @@ stage('Deploy'){
           <h1>Delivery</h1>
           <ul>
             <li>Puppet, ansible, saltstack</li>
-            <li class="fragment" data-fragment-index="1">Docker</li>
+            <li>Docker</li>
           </ul>
           <pre>
 <code>package { 'java9':
@@ -789,6 +835,9 @@ stage('Deploy'){
           </ul>
           <br/>
           <img src="img/atr17/letsencrypt2.png" >
+        </section>
+        <section class="center">
+          <h1>Anything As Code ?</h1>
         </section>
         <section>
           <h1>Modélisation 3D</h1>
@@ -811,7 +860,6 @@ stage('Deploy'){
 </code>
 </pre>
         </section>
-
         <section class="center" data-transition="fade" data-transition-speed="1000"
                  data-background-image="img/atr17/fond3.gif">
           <h1 class="newChapitre">Sum up</h1>
@@ -852,13 +900,17 @@ stage('Deploy'){
             <li><b>Mettre en prod dès le début</b></li>
           </ul>
         </section>
-        <section data-background-image="img/atr17/yeswecan.jpg" class="center">
+        <!-- <section data-background-image="img/atr17/yeswecan.jpg" class="center">
           <img src="img/atr17/weCanDo.jpeg" data-fragment-index="1" class="fragment">
-        </section>
+        </section> -->
         <section>
-          <h1>Merci ! Questions ?</h1>
+          <h1>Merci !</h1>
+          <h2>Questions ?</h2>
           <p>
             <a href="https://github.com/hrambelo/AgileLaval2017/tree/ATR2017">https://github.com/hrambelo/AgileLaval2017/tree/ATR2017</a>
+          </p>
+          <p>
+            <a href="https://github.com/gcollic/AsCode">https://github.com/gcollic/AsCode</a>
           </p>
         </section>
       </div>
